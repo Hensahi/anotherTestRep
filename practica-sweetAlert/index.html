@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles.css">
+    <title>Promedio Estudiantes</title>
+</head>
+
+<body>
+
+    <h1 class="titulo1 mt-5" id="titulo1">Registro de Estudiantes</h1>
+    <div class="container" id="container">
+
+        <form id="formularioEstudiantes">
+            <div class="mb-3">
+                <label for="nameEstudiante" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nameEstudiante" name="nameEstudiante">
+            </div>
+            <div class="mb-3">
+                <label for="lastNameEstudiante" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="lastNameEstudiante" name="lastNameEstudiante">
+            </div>
+            <div class="mb-3">
+                <label for="matriculaEstudiante" class="form-label">Matricula</label>
+                <input type="text" class="form-control" id="matriculaEstudiante" name="matriculaEstudiante">
+            </div>
+            <div class="mb-3">
+                <label for="cursoEstudiante" class="form-label">Curso</label>
+                <input type="text" class="form-control" id="cursoEstudiante" name="cursoEstudiante">
+            </div>
+            <div class="mb-3">
+                <label for="notaEstudiante" class="form-label">Nota</label>
+                <input type="number" class="form-control" id="notaEstudiante" name="notaEstudiante">
+            </div>
+
+            <button type="submit" id="registrarEstudiante" class="btn mb-3 btn-primary">Registrar</button>
+        </form>
+
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Matricula</th>
+                    <th scope="col">Curso</th>
+                    <th scope="col">Nota</th>
+                    <th scope="col">Accion</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- <tr>
+                <td>Mark</td>
+                <td>Martinez</td>
+                <td>32165-3216</td>
+                <td>Web Dev</td>
+                <td>95</td>
+                <td>
+                    <button type="button" class="btn btn-warning">Editar</button>
+                    <button type="button" class="btn btn-danger">Eliminar</button>
+                </td>
+            </tr> -->
+
+            </tbody>
+        </table>
+        <section class="promedio" id="promedio">
+            <h3 class="promedio__titulo" id="promedio__titulo">El promedio general de la clase es: </h3>
+            <p class="promedio__calculado" id="promedio__calculado">Aqui va el promedio</A></p>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

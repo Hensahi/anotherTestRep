@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="input" class="input_label" id="input_label"
+      >Cuantas calificaciones desea introducir</label
+    >
+    <input type="text" name="input" class="input_field" id="input_field" />
+
+    <button class="calificaciones_btn" id="calificaciones_btn">
+      Generar Tabla
+    </button>
+    <div class="container" id="container"></div>
+
+    <table class="table" id="table">
+      <thead class="table__head" id="table__heade">
+        <tr>
+          <th>Asignatura</th>
+          <th>Calificacion</th>
+        </tr>
+      </thead>
+      <tbody class="table__body" id="table__body"></tbody>
+    </table>
+    <div class="hide" id="BTN_Prom_Container">
+      <button class="calcularPromedioBTN" id="calcularPromedioBTN">
+        Generar promedio
+      </button>
+      <input type="text" name="promedio" class="hide" id="promedioCalculado" />
+    </div>
+
+    <div class="hide" id="BTN_Mayor_Container">
+      <button class="calcularMayorBTN" id="calcularMayorBTN">
+        Generar numero mayor
+      </button>
+      <input type="text" name="numeroMayor" class="hide" id="numeroMayor" />
+    </div>
+
+    <div class="hide" id="BTN_Menor_Container">
+      <button class="calcularMenorBTN" id="calcularMenorBTN">
+        Generar numero menor
+      </button>
+      <input type="text" name="numeroMenor" class="hide" id="numeroMenor" />
+    </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>

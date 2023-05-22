@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Practica PokeDex</title>
+</head>
+
+<body>
+
+    <header class="header" id="header">
+        <div class="img-container">
+            <img class="pokedex-logo"
+                src="https://archives.bulbagarden.net/media/upload/thumb/4/4b/Pok%C3%A9dex_logo.png/250px-Pok%C3%A9dex_logo.png"
+                alt="pokedex logo">
+        </div>
+        <div class="searchBarContainer">
+            <input type="search" id="searchBar">
+        </div>
+    </header>
+    <main class="main" id="main">
+        <div id="poke-card" class="poke-card">
+            <h1 class="pokemon-name" id="pokemon-name"></h1>
+            <div id="card-container" class="card-container">
+                <div id="pokeImageContainer" class="pokeImageContainer">
+                    <img id="pokeImage">
+                </div>
+                <div id="pokeInfo" class="pokeInfo">
+                    <p id="altura">Altura: <span id="infoAltura"></span></p>
+                    <p id="categoria">Categoria <span id="infoCategoria">-</span></p>
+                    <p id="peso">Peso: <span id="infoPeso"></span></p>
+                    <div id="habilidadContainer" class="habilidadContainer">Habilidad:
+                        <p class="habilidadData" id="habilidadData"></p>
+                    </div>
+                    <div class="wrapper">
+
+                        <div id="tipoContainer" class="tipoContainer">Tipo:
+                            <p class="tipoData" id="tipoData"></p>
+                        </div>
+                        </p>
+                    </div>
+                    <p id="debilidad">Debilidad <span id="infoData">-</span></p>
+
+                </div>
+                <div id="pokeStats" class="pokeStats">
+                    <div class="statContainer">
+                        <p id="hp" class="hp">HP
+                        <div class="progressBarContainer" id="progressBarContainerHP">
+                            <div class="progressBar progressBarHP" id="progressBarHP"></div>
+                        </div>
+                        </p>
+                    </div>
+
+                    <div class="statContainer">
+                        <p id="attack">Attack
+                        <div class="progressBarContainer" id="progressBarContainerAttack">
+                            <div class="progressBar progressBarAttack" id="progressBarAttack"></div>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="statContainer">
+                        <p id="defense">Defense
+                        <div class="progressBarContainer" id="progressBarContainerDefense">
+                            <div class="progressBar progressBarDefense" id="progressBarDefense"></div>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="statContainer">
+
+                        <p id="special-attack">Special-Attack
+                        <div class="progressBarContainer" id="progressBarContainerSpecial-Attack">
+                            <div class="progressBar progressBarSpecial-Attack" id="progressBarSpecialAttack"></div>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="statContainer">
+
+                        <p id="special-defense">Special-Defense
+                        <div class="progressBarContainer" id="progressBarContainerSpecial-Defense">
+                            <div class="progressBar progressBarSpecial-Defense" id="progressBarSpecialDefense"></div>
+                        </div>
+                        </p>
+                    </div>
+                    <div class="statContainer">
+
+                        <p id="speed">Speed
+                        <div class="progressBarContainer" id="progressBarContainerSpeed">
+                            <div class="progressBar progressBarSpeed" id="progressBarSpeed"></div>
+                        </div>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+            <section class="pokeDescription" id="pokeDescription">
+                <h3 class="description-title" id="descriptionTitle">Description:</h3>
+                <p class="descriptionText" id="descriptionText"></p>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- <script src="/js/app.js"></script> -->
+    <script src="/js/paraProbar.js"></script>
+</body>
+
+</html>

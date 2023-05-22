@@ -1,0 +1,406 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    color: #000;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 70px;
+}
+
+body {
+    /*   background-color: #eee9e9; */
+    background-color: #000;
+    color: #fff;
+}
+
+.card-container {
+    display: flex;
+    margin-bottom: 50px;
+    /*   border: 10px solid black; */
+}
+
+.pokeInfo {
+    width: 40vw;
+    margin: 0 20px;
+    padding: 0 10px;
+    /*   border: solid 10px cyan; */
+}
+
+.pokeImageContainer {
+    width: 45%;
+    /*   border: 10px solid red; */
+}
+
+img {
+    width: 70%;
+}
+
+.pokemon-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.pokeStats {
+    width: 40vw;
+    /* background-color: blueviolet; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.habilidadContainer,
+.habilidadData,
+.tipoContainer,
+.tipoData {
+    display: inline-block;
+}
+
+/*Pokemon Type Colors*/
+
+.normal {
+    background-color: #a8a77a;
+}
+
+.fire {
+    background-color: #ee8130;
+}
+
+.water {
+    background-color: #6390f0;
+}
+
+.electric {
+    background-color: #f7d02c;
+}
+
+.grass {
+    background-color: #7ac74c;
+}
+
+.ice {
+    background-color: #96d9d6;
+}
+
+.fighting {
+    background-color: #c22e28;
+}
+
+.poison {
+    background-color: #a33ea1;
+}
+
+.ground {
+    background-color: #e2bf65;
+}
+
+.flying {
+    background-color: #a98ff3;
+}
+
+.psychic {
+    background-color: #f95587;
+}
+
+.bug {
+    background-color: #a6b91a;
+}
+
+.rock {
+    background-color: #b6a136;
+}
+
+.ghost {
+    background-color: #735797;
+}
+
+.dragon {
+    background-color: #6f35fc;
+}
+
+.dark {
+    background-color: #705746;
+}
+
+.steel {
+    background-color: #b7b7ce;
+}
+
+.fairy {
+    background-color: #d685ad;
+}
+
+.fairy,
+.steel,
+.dark,
+.dragon,
+.ghost,
+.rock,
+.bug,
+.psychic,
+.flying,
+.ground,
+.poison,
+.fighting,
+.ice,
+.grass,
+.electric,
+.water,
+.fire,
+.normal {
+    margin: 5px;
+    padding: 7px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+/*ESTILOS PARA BARRA DE ESTATS*/
+
+.statContainer {
+    display: flex;
+    align-items: center;
+    /*   justify-content: space-between; */
+}
+
+.hp {
+    padding: 5px;
+    text-align: center;
+}
+
+.progressBarContainer {
+    width: 200px;
+    height: 30px;
+    margin-left: 10px;
+    background-color: #c1c1c1;
+    border-radius: 10px;
+}
+
+.progressBar {
+    position: relative;
+    width: 0;
+    margin: 0;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.progressBar::after {
+    position: absolute;
+    top: 19%;
+    right: 4.5%;
+}
+
+/*ESTILOS PARA BARRA DE HP*/
+.progressBarHP {
+    animation: widthHP 1s ease-in forwards;
+}
+
+.progressBarHP::after {
+    content: attr(data-stathp);
+}
+
+@keyframes widthHP {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--widthHP);
+    }
+}
+
+/*ESTILOS PARA BARRA DE Attack*/
+
+.progressBarAttack {
+    animation: widthHP 1s ease-in forwards;
+}
+
+.progressBarAttack::after {
+    content: attr(data-StatAttack);
+}
+
+@keyframes widthAttack {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--widthAttack);
+    }
+}
+
+/*ESTILOS PARA BARRA DE Defense*/
+
+.progressBarDefense {
+    animation: widthDefense 1s ease-in forwards;
+}
+
+.progressBarDefense::after {
+    content: attr(data-StatDefense);
+}
+
+@keyframes widthDefense {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--widthDefense);
+    }
+}
+
+/*ESTILOS PARA BARRA DE Special-Attack*/
+
+.progressBarSpecial-Attack {
+    animation: widthSpecialAttack 1s ease-in forwards;
+}
+
+.progressBarSpecial-Attack::after {
+    content: attr(data-StatSpecialAttack);
+}
+
+@keyframes widthSpecialAttack {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--widthSpecialAttack);
+    }
+}
+
+/*ESTILOS PARA BARRA DE Special-Defense*/
+
+.progressBarSpecial-Defense {
+    animation: widthSpecialDefense 1s ease-in forwards;
+}
+
+.progressBarSpecial-Defense::after {
+    content: attr(data-StatSpecialDefense);
+}
+
+@keyframes widthSpecialDefense {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--widthSpecialDefense);
+    }
+}
+
+/*ESTILOS PARA BARRA DE Speed*/
+
+.progressBarSpeed {
+    animation: widthSpeed 1s ease-in forwards;
+}
+
+.progressBarSpeed::after {
+    content: attr(data-StatSpeed);
+}
+
+@keyframes widthSpeed {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: var(--widthSpeed);
+    }
+}
+
+.pokeDescription {
+    width: 50vw;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.description-title {
+    font-size: 1.4em;
+}
+
+.descriptionText {
+    text-align: center;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    border: solid 5px var(--borderColor);
+}
+
+/*Border Colors*/
+
+.bordernormal {
+    border: 5px solid #a8a77a;
+}
+
+.borderfire {
+    border: 5px solid #ee8130;
+}
+
+.borderwater {
+    border: 5px solid #6390f0;
+}
+
+.borderelectric {
+    border: 5px solid #f7d02c;
+}
+
+.bordergrass {
+    border: 5px solid #7ac74c;
+}
+
+.borderice {
+    border: 5px solid #96d9d6;
+}
+
+.borderfighting {
+    border: 5px solid #c22e28;
+}
+
+.borderpoison {
+    border: 5px solid #a33ea1;
+}
+
+.borderground {
+    border: 5px solid #e2bf65;
+}
+
+.borderflying {
+    border: 5px solid #a98ff3;
+}
+
+.borderpsychic {
+    border: 5px solid #f95587;
+}
+
+.borderbug {
+    border: 5px solid #a6b91a;
+}
+
+.borderrock {
+    border: 5px solid #b6a136;
+}
+
+.borderghost {
+    border: 5px solid #735797;
+}
+
+.borderdragon {
+    border: 5px solid #6f35fc;
+}
+
+.borderdark {
+    border: 5px solid #705746;
+}
+
+.bordersteel {
+    border: 5px solid #b7b7ce;
+}
+
+.borderfairy {
+    border: 5px solid #d685ad;
+}
